@@ -10,7 +10,7 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+  font-family: 'Inter', sans-serif;
   color: currentColor;
 }
 
