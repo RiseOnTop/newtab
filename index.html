@@ -55,7 +55,7 @@
           </button>
           <input type="text" placeholder="what do you want to search now?" autofocus />
         </div>
-        <p id="quote"></p>
+        <div> <br> </div> <div id="quote"></div>
       </main>
     </div>
     <a id="yags-link" href="https://prettycoffee.github.io/yet-another-generic-startpage/">Created with YAGS</a>
@@ -76,7 +76,8 @@
           })
           .then(function(data) {
             var quote = data.contents.quotes[0].quote;
-            document.getElementById("quote").innerHTML = quote;
+            var author = data.contents.quotes[0].author;
+            document.getElementById("quote").innerHTML = '"' + quote + '"';
           })
           .catch(function(error) {
             console.log(error);
