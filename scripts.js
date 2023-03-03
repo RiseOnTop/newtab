@@ -92,23 +92,3 @@ const injectBookmarks = () => {
 }
 
 injectBookmarks()
-
-  function getDailyQuote() {
-          var date = new Date();
-          var year = date.getFullYear();
-          var month = ('0' + (date.getMonth() + 1)).slice(-2);
-          var day = ('0' + date.getDate()).slice(-2);
-          var url = 'https://quotes.rest/qod?date=' + year + '-' + month + '-' + day;
-          fetch(url)
-            .then(function(response) {
-              return response.json();
-            })
-            .then(function(data) {
-              var quote = data.contents.quotes[0].quote;
-              document.getElementById("quote").innerHTML = quote;
-            })
-            .catch(function(error) {
-              console.log(error);
-            });
-        }
-        getDailyQuote();
